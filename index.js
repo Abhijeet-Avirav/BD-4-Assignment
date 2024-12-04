@@ -242,14 +242,14 @@ app.get('/dishes/filter', async (req, res) => {
   try {
     const isVeg = req.query.isVeg;
 
-    const dish = await getDishesByFilter(isVeg);
+    const dishes = await getDishesByFilter(isVeg);
 
-    if (!dish) {
-      return res.status(404).json({ message: 'No dish found with id ' + id });
+    if (dishes.length === 0) {
+      return res.status(404).json({ message: 'No dish found' });
     }
 
     return res.status(200).json({
-      dish,
+      dishes,
     });
   } catch (error) {
     return res.status(500).json({ message: error.message });
