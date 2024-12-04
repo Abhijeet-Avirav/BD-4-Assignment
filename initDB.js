@@ -88,21 +88,21 @@ db.serialize(() => {
   ];
   const dishes = [
     {
-      id: 1
+      id: 1,
       name: 'Paneer Butter Masala',
       price: 300,
       rating: 4.5,
       isVeg: 'true',
     },
     {
-      id: 2
+      id: 2,
       name: 'Chicken Alfredo Pasta',
       price: 500,
       rating: 4.7,
       isVeg: 'false',
     },
     {
-      id: 3
+      id: 3,
       name: 'Veg Hakka Noodles',
       price: 250,
       rating: 4.3,
